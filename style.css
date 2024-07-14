@@ -5,18 +5,53 @@
 }
 
 body {
-    background-color: gray;
+    background-color: white;
     min-width: 100%;
     width: fit-content;
+    font-family: "Nunito";
 }
 
 body p{
     font-size: clamp(1.2rem, 3vw, 1.2rem);
+    font-weight: bold;
 }
 
 body a{
     text-decoration: none;
 }
+
+body h1 span{
+    color: #f4b312;
+}
+
+body h1{
+    font-size: clamp(2rem, 3vw, 4rem);
+    font-weight: bold;
+    color: #29176d;
+}
+
+body .main{
+    margin: 2rem 0rem;
+}
+
+
+/* =====ICONFY ICONS===== */
+
+.ion--globe-outline {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='none' stroke='%23000' stroke-miterlimit='10' stroke-width='32' d='M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208s208-93.13 208-208S370.87 48 256 48Z'/%3E%3Cpath fill='none' stroke='%23000' stroke-miterlimit='10' stroke-width='32' d='M256 48c-58.07 0-112.67 93.13-112.67 208S197.93 464 256 464s112.67-93.13 112.67-208S314.07 48 256 48Z'/%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M117.33 117.33c38.24 27.15 86.38 43.34 138.67 43.34s100.43-16.19 138.67-43.34m0 277.34c-38.24-27.15-86.38-43.34-138.67-43.34s-100.43 16.19-138.67 43.34'/%3E%3Cpath fill='none' stroke='%23000' stroke-miterlimit='10' stroke-width='32' d='M256 48v416m208-208H48'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+/* =====HEADER===== */
 
 .header {
     display: flex;
@@ -91,8 +126,9 @@ body a{
     width: min(50rem, 100%);
 }
 
-.header-navbar2-content-menu{
+.header-navbar2-content-menu a{
     font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: bold;
     color: #29176d;
 }
 
@@ -103,10 +139,108 @@ body a{
     background-color: #f4b312;
     color: white;
     font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: bold;
+    font-family: "Nunito";
+}
+
+/* =====MAIN 1====== */
+
+.main1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 620px;
+    height: fit-content;
+    padding: 1rem;
+    background-image: url(OneTime-Images/main1-image.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.main1-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1000px, 100%);
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+
+.main1-content h1{
+    font-size: clamp(3rem, 4vw, 5rem);
+    width: min(20rem, 100%);
+    font-weight: bolder;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+.main1-content p{
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
+    width: min(22rem, 100%);
+    color: white;
+    line-height: 1.8rem;
+}
+
+
+.main2{
+    display: flex;
+    background-color: white;
+    min-height: 420px;
+    height: fit-content;
+}
+
+.main2-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1240px, 100%);
+    margin: 0 auto;
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main2-content-food-image{
+    display: flex;
+    width: min(40rem, 100%);
+    overflow: hidden;
+}
+
+.main2-content-food-image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 @media screen and (max-width:1023px){
     .header-navbar1, .header-navbar2-content{
         display: none;
+    }
+}
+
+@media screen and (max-width:992px){
+    .main2-content{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:703px){
+    .main1-content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4rem;
+    }
+}
+
+@media screen and (max-width:654px){
+    .main1-content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4rem;
     }
 }
